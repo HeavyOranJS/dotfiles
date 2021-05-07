@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+BASEDIR=$(dirname $0)
+cd $BASEDIR
+
+ln -s ${PWD}/files/bashrc ~/.bashrc
+ln -s ${PWD}/files/vimrc ~/.vimrc
+ln -s ${PWD}/files/gitconfig ~/.gitconfig

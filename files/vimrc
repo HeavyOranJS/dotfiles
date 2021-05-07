@@ -1,0 +1,9 @@
+autocmd vimenter * ++nested colorscheme gruvbox
+set background=dark
+set number relativenumber
+
+" local customizations in ~/.vimrc_local
+let $LOCALFILE=expand("~/.vimrc_local")
+if filereadable($LOCALFILE)
+    source $LOCALFILE
+endif
