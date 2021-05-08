@@ -3,6 +3,8 @@ BASEDIR=$(dirname $0)
 cd $BASEDIR
 
 ln -s ${PWD}/files/bashrc ~/.bashrc
+ln -s ${PWD}/files/gitconfig ~/.gitconfig
+
 ln -s ${PWD}/files/vimrc ~/.vimrc
 ln -s ${PWD}/files/ideavimrc ~/.ideavimrc
-ln -s ${PWD}/files/gitconfig ~/.gitconfig
+ln -s ${PWD}/files/ideavimrc_cyrillic ~/.ideavimrc_cyrillic
