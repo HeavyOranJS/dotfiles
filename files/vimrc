@@ -1,6 +1,10 @@
+"style
 autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark
 set number relativenumber
+
+"cyrillic
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
 " local customizations in ~/.vimrc_local
 let $LOCALFILE=expand("~/.vimrc_local")
