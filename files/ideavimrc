@@ -1,5 +1,7 @@
 set number relativenumber
 
+nmap g] :action GotoImplementation<CR>
+
 " local customizations in ~/.vimrc_local
 let $LOCALFILE=expand("~/.ideavimrc_cyrillic")
 if filereadable($LOCALFILE)
