@@ -5,15 +5,40 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" smart case-sensitive search
-set ignorecase
-set smartcase
-
 "plugins
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"todo install from vimplug, not from cocInstall -- needs yarn
+"Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
+
+"remaps
+"goro remaps
+nmap gd <Plug>(coc-definition)
+nmap gr <Plug>(coc-references)
+nmap gi <Plug>(coc-implementation)
+nmap gr <Plug>(coc-references)
+" documentation
+" Use K for show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+"folding by method
+set foldmethod=syntax
+"open folds by default when opening file
+au BufRead * normal zR
+
+" smart case-sensitive search
+set ignorecase
+set smartcase
 
 "style
 autocmd vimenter * ++nested colorscheme gruvbox
