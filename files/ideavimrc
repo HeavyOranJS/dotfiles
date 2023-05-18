@@ -1,8 +1,24 @@
 set number relativenumber
 
-nmap g] :action GotoImplementation<CR>
-
 " local customizations in ~/.vimrc_local
 let $LOCALFILE=expand("~/.ideavimrc_cyrillic")
 if filereadable($LOCALFILE)
     source $LOCALFILE
+
+" space is the leader
+let mapleader = " "
+
+" set line numbers
+:set number
+:set relativenumber
+
+:map <S-Space> <Action>(ShowErrorDescription)
+
+" idea actions mapping
+":map <leader>d <Action>(Debug)
+:map <leader>r <Action>(ReformatCode)
+:map <leader>b <Action>(ToggleLineBreakpoint)
+:map <leader>c <Action>(Resume)
+:map <leader>d <Action>(Debug)
+
+nmap g] :action GotoImplementation<CR>
