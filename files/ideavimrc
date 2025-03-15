@@ -1,20 +1,35 @@
+""" vim options
+
 " local customizations in ~/.vimrc_local
-source ~/.ideavimrc_cyrillic"
+" 'expand' and 'filereadable' are not implemented yet: https://youtrack.jetbrains.com/issue/VIM-2440/.ideavimrc-or-.vimrc-not-loading-configuration
+source ~/.ideavimrc_cyrillic
 
 " space is the leader
 let mapleader = " "
 
 " set line numbers
-:set number
-:set relativenumber
+set number
+set relativenumber
 
-:map <S-Space> <Action>(ShowErrorDescription)
+" incremental search
+set incsearch
+
+map <S-Space> <Action>(ShowErrorDescription)
+
+""" IdeaVim options
+" Smart join for <C-J> https://github.com/JetBrains/ideavim/blob/master/doc/ideajoin-examples.md
+set ideajoin
 
 " idea actions mapping
-":map <leader>d <Action>(Debug)
-:map <leader>r <Action>(ReformatCode)
-:map <leader>b <Action>(ToggleLineBreakpoint)
-:map <leader>c <Action>(Resume)
-:map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>c <Action>(Resume)
+map <leader>d <Action>(Debug)
+map <leader>o <Action>(FileStructurePopup)
+map <leader>s <Action>(SelectInProjectView)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>[ <Action>(MethodUp)
+map <leader>] <Action>(MethodDown)
 
 nmap g] :action GotoImplementation<CR>
