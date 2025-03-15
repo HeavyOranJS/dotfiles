@@ -1,9 +1,5 @@
-set number relativenumber
-
 " local customizations in ~/.vimrc_local
-let $LOCALFILE=expand("~/.ideavimrc_cyrillic")
-if filereadable($LOCALFILE)
-    source $LOCALFILE
+source ~/.ideavimrc_cyrillic"
 
 " space is the leader
 let mapleader = " "
