@@ -14,5 +14,6 @@ Run `install`.
 - [citizenmatt](https://github.com/citizenmatt/dotfiles/blob/master/ideavimrc);
 - [Alex Plate](https://gist.github.com/AlexPl292/50a3ff4cef1badcbb23436b22cbd3cf4)
 
-### Plugins
-[official documentation](https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins)
+### misc
+- plugin [official documentation](https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins)
+- actionlist `:actionlist` or see [docs](https://gist.github.com/zchee/9c78f91cc5ad771c1f5d)
